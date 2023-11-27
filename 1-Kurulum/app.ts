@@ -245,3 +245,88 @@
 
 
 //BÖLÜM 3: Typescript - Control Flow Statements
+//#15. If Else Ternary Operator
+// let x: number = 20;
+// let y: number = 20;
+// if (x > y) {
+//     console.log("x y'den büyüktür")
+// } else if (x < y) {
+//     console.log("x y'den küçüktür.")
+// } else {
+//     console.log("x y'ye eşittir.")
+// }
+
+// x > y ? console.log("x y'den büyüktür") : console.log("x y'den büyüktür veya eşittir.")
+
+
+//#16. Switch Case
+// let day: number = 2;
+
+// switch (day) {
+//     case 0:
+//         console.log("Pazar")
+//         break;
+//     case 1:
+//         console.log("Pazartesi")
+//         break;
+//     case 2:
+//         console.log("Salı")
+//         break;
+//     case 3:
+//         console.log("Çarşamba")
+//         break;
+//     case 4:
+//         console.log("Perşembe")
+//         break;
+//     case 5:
+//         console.log("Cuma")
+//         break;
+//     case 6:
+//         console.log("Cumartesi")
+//         break;
+//     default:
+//         console.log("Böyle bir gün yok!")
+//         break;
+// }
+
+
+//#17. For Loop
+// for (let i = 0; i < 3; i++) {
+//     console.log("i değerim=" + i)
+// }
+
+// let arr = [10,20,30,40];
+
+// for(let item of arr){
+//     console.log(item);
+// }
+
+// for(let item in arr){ //in ve of farklıdır
+//     console.log(item);
+// }
+
+// let str = "HAYDAR";
+// for(let item1 of str){
+//     console.log(item1)
+// }
+
+
+//#18. While Loop - Do While Loop - Break
+// let counter = 0;
+
+// while(counter<5){
+//     console.log(counter);
+//     counter++;
+
+//     if(counter == 3){
+//         break;
+//     }
+// }
+
+// do {
+//     console.log(counter);
+//     counter++;    
+// } while (counter<5);
+
+
+//Bölüm 4: Typescript - Functions
