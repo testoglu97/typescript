@@ -321,7 +321,7 @@
 //     if(counter == 3){
 //         break;
 //     }
-// }
+//  }
 
 // do {
 //     console.log(counter);
@@ -330,3 +330,110 @@
 
 
 //Bölüm 4: Typescript - Functions
+//#19. Function
+// function add(a:number,b:number):number{
+//     return a+b;
+// }
+
+// let toplam = add(4,4);
+// // let toplam = add('4','4');//Argument of type 'string' is not assignable to parameter of type 'number'.ts(2345)
+
+// console.log(toplam);
+// console.log(typeof(toplam));
+
+//void
+// function bastir():void{
+//     console.log("Test Testoğlu");
+// }
+
+// bastir();
+
+// function birlestir(name:string,surname:string="Default Parametre"){
+//     return name+ ' ' + surname;
+// }
+
+// let adSoyad = birlestir('Haydar','Testoğlu');
+// let adSoyad1 = birlestir('Haydar');
+// console.log(adSoyad);
+// console.log(adSoyad1);
+
+//#20. Optional Parameters - Arrow Functions
+//Optional olan ? ile gösterilir.
+// function carpim(a:number,b:number,c?:number){
+//     if(typeof(c) !== 'undefined'){
+//         return a*b*c;
+//     }else{
+//         return a*b
+//     }
+// }
+
+// let degisken = carpim(3,4,5);
+// console.log(degisken)
+
+// let degisken1 = carpim(3,4);
+// console.log(degisken1)
+
+
+// function carpim(a:number,b:number):number{
+//         return a*b
+// }
+//Kısa yazım
+// let carpim = (a:number,b:number) => a*b;
+// let degisken2 = carpim(3,4);
+// console.log(degisken2)
+
+//Fonksiyon arrow function
+// let carpim = (a:number,b:number) => {
+//         return a*b
+// }
+// let degisken2 = carpim(3,4);
+// console.log(degisken2)
+
+//Kısa yazım
+// let bastir = ()=> console.log("Test");
+//Uzun hali
+// let bastir = ()=> {
+//         console.log("Test");
+// }
+
+// bastir();
+
+//#21. Function Overloading
+//Her iki tipide alabilecek şekilde dönüştürdük.
+// function islem(a: number, b: number): number;
+// function islem(a: string, b: string): string;
+
+// function islem(a:any, b:any):any{
+//         return a+b;
+// }
+
+// let degisken = islem("Test", "Testoglu");
+// let degisken1 = islem(2,3);
+// console.log(degisken);
+// console.log(degisken1);
+
+
+//#22. Rest Parameters
+// function toplam(...numbers:number[]){
+//         let total=0;
+//         numbers.forEach((num) => total +=num);
+//         return total;
+// }
+
+// console.log(toplam(10,20,30));
+
+//Hata vermesin diye rest parameters en sonda kullanılır.
+// function toplam(a:string,...numbers:number[]){
+//         console.log(a);
+//         let total=0;
+//         numbers.forEach((num) => total +=num);
+//         return total;
+// }
+
+// console.log(toplam("Can",20,30));
+
+// function birlestir(message:string, ...names:string[]){
+//         console.log(message + " " + names.join(","));
+// }
+
+// birlestir("Sınıf listesi:", "Haydar","Şükrü","Hayri","Osman")
