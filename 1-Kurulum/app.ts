@@ -437,3 +437,33 @@
 // }
 
 // birlestir("Sınıf listesi:", "Haydar","Şükrü","Hayri","Osman")
+
+
+
+//Bölüm 5: Typescript - Classes
+//#23. Class
+
+// class Person {
+//     id:number;
+//     firstName:string;
+//     lastName:string;
+
+//     //yani üst tarafa parametleri eşitledik.
+//     constructor(idim:number, firstNameim:string, lastNameim:string) {
+//         this.id = idim;
+//         this.firstName = firstNameim;
+//         this.lastName = lastNameim;
+//     }
+
+//     getFullName(){
+//         return `${this.firstName} ${this.lastName}`;
+//     }
+// }
+
+// let kisiBilgim = new Person(1, "Haydar", "Testoğlu");
+// console.log(kisiBilgim);
+
+// console.log(kisiBilgim.getFullName());
+
+
+//#24. Access Modifiers (Public Private Protected)
