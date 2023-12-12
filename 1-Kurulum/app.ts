@@ -467,3 +467,68 @@
 
 
 //#24. Access Modifiers (Public Private Protected)
+// class Person {
+//     protected id:number;
+//     firstName:string;
+//     lastName:string;
+
+//     //yani üst tarafa parametleri eşitledik.
+//     constructor(idim:number, firstNameim:string, lastNameim:string) {
+//         this.id = idim;
+//         this.firstName = firstNameim;
+//         this.lastName = lastNameim;
+//     }
+
+//     getFullName(){
+//         return `${this.firstName} ${this.lastName}`;
+//     }
+// }
+
+
+//#25. Readonly
+// class Person {
+//     readonly id:number;
+//     firstName:string;
+//     lastName:string;
+
+//     //yani üst tarafa parametleri eşitledik.
+//     constructor(idim:number, firstNameim:string, lastNameim:string) {
+//         this.id = idim;
+//         this.firstName = firstNameim;
+//         this.lastName = lastNameim;
+//     }
+
+//     getFullName(){
+//         return `${this.firstName} ${this.lastName}`;
+//     }
+// }
+
+// let kisiBilgim = new Person(1, "Haydar", "Testoğlu");
+// // kisiBilgim.id=5; //Cannot assign to 'id' because it is a read-only property.ts(2540) Değer bastırabliriz ama dışarıda değer değiştiremeyiz readonly'de.
+
+// console.log(kisiBilgim.getFullName());
+
+//#26. Inheritance
+class Person {
+    readonly id: number;
+    firstName: string;
+    lastName: string;
+
+    //yani üst tarafa parametleri eşitledik.
+    constructor(idim: number, firstNameim: string, lastNameim: string) {
+        this.id = idim;
+        this.firstName = firstNameim;
+        this.lastName = lastNameim;
+    }
+
+    getFullName() {
+        return `${this.firstName} ${this.lastName}`;
+    }
+}
+
+class Employee extends Person {
+    constructor(idim: number, firstNameim: string, lastNameim: string) {
+        super(idim, firstNameim, lastNameim)
+    }
+}
+DK 3.16

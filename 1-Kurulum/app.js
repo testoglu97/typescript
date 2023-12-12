@@ -1,5 +1,20 @@
 // console.log("Typescript Çalışmasıııııı!");
 // console.log("Haydar!");
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 //BÖLÜM 2: Typescript - Data Types
 //#3. Data Annotation
 // let age: number = 26;
@@ -359,3 +374,57 @@
 // console.log(kisiBilgim);
 // console.log(kisiBilgim.getFullName());
 //#24. Access Modifiers (Public Private Protected)
+// class Person {
+//     protected id:number;
+//     firstName:string;
+//     lastName:string;
+//     //yani üst tarafa parametleri eşitledik.
+//     constructor(idim:number, firstNameim:string, lastNameim:string) {
+//         this.id = idim;
+//         this.firstName = firstNameim;
+//         this.lastName = lastNameim;
+//     }
+//     getFullName(){
+//         return `${this.firstName} ${this.lastName}`;
+//     }
+// }
+//#25. Readonly
+// class Person {
+//     readonly id:number;
+//     firstName:string;
+//     lastName:string;
+//     //yani üst tarafa parametleri eşitledik.
+//     constructor(idim:number, firstNameim:string, lastNameim:string) {
+//         this.id = idim;
+//         this.firstName = firstNameim;
+//         this.lastName = lastNameim;
+//     }
+//     getFullName(){
+//         return `${this.firstName} ${this.lastName}`;
+//     }
+// }
+// let kisiBilgim = new Person(1, "Haydar", "Testoğlu");
+// // kisiBilgim.id=5; //Cannot assign to 'id' because it is a read-only property.ts(2540) Değer bastırabliriz ama dışarıda değer değiştiremeyiz readonly'de.
+// console.log(kisiBilgim.getFullName());
+//#26. Inheritance
+var Person = /** @class */ (function () {
+    //yani üst tarafa parametleri eşitledik.
+    function Person(idim, firstNameim, lastNameim) {
+        this.id = idim;
+        this.firstName = firstNameim;
+        this.lastName = lastNameim;
+    }
+    Person.prototype.getFullName = function () {
+        return "".concat(this.firstName, " ").concat(this.lastName);
+    };
+    return Person;
+}());
+var Employee = /** @class */ (function (_super) {
+    __extends(Employee, _super);
+    function Employee(idim, firstNameim, lastNameim) {
+        return _super.call(this, idim, firstNameim, lastNameim) || this;
+    }
+    return Employee;
+}(Person));
+DK;
+3.16;
