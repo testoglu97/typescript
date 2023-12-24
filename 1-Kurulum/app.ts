@@ -29,10 +29,8 @@
 // let employeefirstName:string = "Haydar";
 // console.log(employeefirstName);
 
-
 // let employeeName:string="Haydar";
 // let employeeDept:string="Engineering";
-
 
 // //Pre-ES6
 // let employeeDesc1:string= employeeName + " works in the " + employeeDept + " department.";
@@ -41,10 +39,8 @@
 // let employeeDesc2:string = `${employeeName} works in the ${employeeDept} department.`;
 // console.log(employeeDesc2);
 
-
 // let isPresent: boolean = true;
 // console.log(isPresent);
-
 
 //#5. Data Type - Array
 //Aşağıdaki iki array tanımında çıktısı aynıdır.
@@ -88,7 +84,6 @@
 //     console.log(fruits[i]);
 // }
 
-
 //#6. Data Type - Tuple
 // let Id: number = 1;
 // let testName: string = "Haydar";
@@ -103,8 +98,6 @@
 // var employee: [number, string][];
 // employee = [[1,"Steve"], [2, "Bill"], [3, "Haydar"]];
 // console.log(employee);
-
-
 
 //#7. Data Type - Object
 // type Person = {
@@ -138,7 +131,6 @@
 // };
 
 // console.log(person)
-
 
 //#8. Data Type - Enum
 // enum Media {
@@ -190,7 +182,6 @@
 // let arr: any[]= ["John", 23, true];
 // console.log(arr);
 
-
 //#10. Data Type - Void (Geriye değer döndürmezse kullanılır return olmaz yani)
 // function sayHello(): void{
 //     let can = "Can";
@@ -213,7 +204,6 @@
 //let nothing:never = null; //Type 'null' is not assignable to type 'never'.ts(2322)
 //let nothing:never = undefined; //Type 'undefined' is not assignable to type 'never'.ts(2322)
 
-
 //#11. Type Inference (Herhangi bir değişkene tip belirtme yapmasakta tipinin tutulmasıdır)
 // let sayac = 0;
 // console.log(typeof (sayac))
@@ -221,7 +211,6 @@
 // let a = "some text";
 // let b = 123;
 // a=b; //Type 'number' is not assignable to type 'string'.ts(2322)
-
 
 //#12. Type Assertion
 // let code:any = 123;
@@ -233,7 +222,6 @@
 // let empCode1 = <number>code;
 // console.log(typeof(empCode1));
 
-
 // interface Employee{
 //     name:string,
 //     code:number
@@ -242,7 +230,6 @@
 // console.log(typeof(employee));
 // employee.name = "Can"; //Property 'name' does not exist on type '{}'.ts(2339)
 // console.log(employee);
-
 
 //BÖLÜM 3: Typescript - Control Flow Statements
 //#15. If Else Ternary Operator
@@ -257,7 +244,6 @@
 // }
 
 // x > y ? console.log("x y'den büyüktür") : console.log("x y'den büyüktür veya eşittir.")
-
 
 //#16. Switch Case
 // let day: number = 2;
@@ -289,7 +275,6 @@
 //         break;
 // }
 
-
 //#17. For Loop
 // for (let i = 0; i < 3; i++) {
 //     console.log("i değerim=" + i)
@@ -310,7 +295,6 @@
 //     console.log(item1)
 // }
 
-
 //#18. While Loop - Do While Loop - Break
 // let counter = 0;
 
@@ -325,9 +309,8 @@
 
 // do {
 //     console.log(counter);
-//     counter++;    
+//     counter++;
 // } while (counter<5);
-
 
 //Bölüm 4: Typescript - Functions
 //#19. Function
@@ -373,7 +356,6 @@
 // let degisken1 = carpim(3,4);
 // console.log(degisken1)
 
-
 // function carpim(a:number,b:number):number{
 //         return a*b
 // }
@@ -412,7 +394,6 @@
 // console.log(degisken);
 // console.log(degisken1);
 
-
 //#22. Rest Parameters
 // function toplam(...numbers:number[]){
 //         let total=0;
@@ -437,8 +418,6 @@
 // }
 
 // birlestir("Sınıf listesi:", "Haydar","Şükrü","Hayri","Osman")
-
-
 
 //Bölüm 5: Typescript - Classes
 //#23. Class
@@ -465,7 +444,6 @@
 
 // console.log(kisiBilgim.getFullName());
 
-
 //#24. Access Modifiers (Public Private Protected)
 // class Person {
 //     protected id:number;
@@ -483,7 +461,6 @@
 //         return `${this.firstName} ${this.lastName}`;
 //     }
 // }
-
 
 //#25. Readonly
 // class Person {
@@ -509,26 +486,92 @@
 // console.log(kisiBilgim.getFullName());
 
 //#26. Inheritance
-class Person {
-    readonly id: number;
-    firstName: string;
-    lastName: string;
+// class Person {
+//     readonly id: number;
+//     firstName: string;
+//     lastName: string;
 
-    //yani üst tarafa parametleri eşitledik.
-    constructor(idim: number, firstNameim: string, lastNameim: string) {
-        this.id = idim;
-        this.firstName = firstNameim;
-        this.lastName = lastNameim;
-    }
+//     //yani üst tarafa parametleri eşitledik.
+//     constructor(idim: number, firstNameim: string, lastNameim: string) {
+//         this.id = idim;
+//         this.firstName = firstNameim;
+//         this.lastName = lastNameim;
+//     }
 
-    getFullName() {
-        return `${this.firstName} ${this.lastName}`;
-    }
-}
+//     getFullName() {
+//         return `${this.firstName} ${this.lastName}`;
+//     }
+// }
 
-class Employee extends Person {
-    constructor(idim: number, firstNameim: string, lastNameim: string) {
-        super(idim, firstNameim, lastNameim)
-    }
-}
-DK 3.16
+// class Employee extends Person {
+//     constructor(idim: number, firstNameim: string, lastNameim: string) {
+//         super(idim, firstNameim, lastNameim)
+//     }
+// }
+
+// let employee = new Employee(29,"Haydar","Test");
+// console.log(employee);
+// console.log(employee.getFullName());
+
+//#27. Static Methods - Properties
+// class Circle{
+//     static pi:number=3.14;
+//     pi = 3;
+
+//     constructor(){
+//         Circle.pi++;
+//     }
+
+//     //statik metod tanım
+//     static hesapla(yaricap:number){
+//         return this.pi * yaricap * yaricap;
+//     }
+// }
+// //Statik tanımlamada Class ismi nokta pi diyerek ulaşabiliriz.
+// console.log(Circle.pi)
+// console.log(Circle.hesapla(5));
+
+// //Normal properties ulaşma
+// let objem = new Circle();
+// console.log(objem.pi);
+
+// let objem2 = new Circle();
+// console.log(objem2.pi);
+
+// //obje oluşturunca pi değeri arttı çünkü statik değer her new işleminde pi değeri artar ve 5.14 değerini aldı çünkü 2 kere çalıştı
+// console.log(Circle.pi)
+
+//#28. Abstract Class
+// abstract class Department {
+//   constructor(public name: string) {}
+
+//   printName(): void {
+//     console.log("Department name: " + this.name);
+//   }
+
+//   abstract printMeeting(): void;
+
+//   //Abstract class içinde abstract metod tanımlarsak onu extend ettiğimiz yerde kullanmalı (implemente etmemiz) gerekmektedir.
+//   //Ama normal metod tanımlarsak onu implemente etmemize gerek yoktur.
+// }
+
+// class AccountingDepartment extends Department {
+//   constructor() {
+//     super("Accounting and Auditing");
+//   }
+
+//   //Yukarıda abstract metod tanımladım burada kullanmazsam hata verir. Non-abstract class 'AccountingDepartment' does not implement all abstract members of 'Department'
+
+//   printMeeting(): void {
+//     console.log("The Accounting Department meets each Monday at 10am.");
+//   }
+
+//   generateReports(): void {
+//     console.log("Generating accounting reports...");
+//   }
+// }
+
+// let department = new AccountingDepartment();
+// department.printName();
+// department.printMeeting();
+// department.generateReports();
